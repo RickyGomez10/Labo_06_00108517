@@ -1,4 +1,4 @@
-function SumProd(arreglo){
+function ejercicio2(arreglo){
     let total = 0;
     let promedio =0;
     for(let i of arreglo){

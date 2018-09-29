@@ -1,18 +1,30 @@
+function ejercicio3(arreglo){
+    let tipo = [];
+    
 
-function valor(arreglo){
-    let tipos = [];
-    let cantidad = [];
-    for(let i of arreglo){
-        if(!tipos.includes(typeof(i))){
-            tipos.push(typeof(i));
+    for (let i of arreglo){
+        
+        if(!tipo.includes(typeof(i))){
+            tipo.push(typeof(i));
+           
+            
         }
-        for(let j of tipos){
-            if(tipos.includes(i)){
-                cantidad.push(typeof(i));
+       
+    }
+     console.log(tipo);
+    for(let x of tipo){
+        let cantidad = 0;
+        for(let y of arreglo){
+            if(x==typeof(y)){
+                
+                cantidad++;
+                
+                
             }
 
         }
+        console.log(x+": "+cantidad);
     }
-    console.log(tipos);
-    console.log(cantidad);
-}   
+
+
+}
