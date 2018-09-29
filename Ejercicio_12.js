@@ -16,7 +16,7 @@ function ejercicio12(){
 			var idusuario1 = prompt("Ingrese id del usuario");
 			for(let i of arreglo){
 				if (i.idusuario == idusuario1) {
-					
+					alert("Ya existe el usuario que desea ingresar, se saldra del programa");
 					throw "Ya existe el usuario que esta intentando ingresar";
 
 				}
@@ -37,22 +37,23 @@ function ejercicio12(){
 
 			}
 			arreglo.push(objeto);
+			alert("Usuario ingresado correctamente");
 			
 		}else if(numero==2){
 			var buscar = prompt("Ingrese el id del usuario que desea buscar para eliminar");
-			var encontrado;
+			var encontrado = false;
 			for(var i = 0; i < arreglo.length; i += 1) {
 				if(arreglo[i]['idusuario'] === buscar) {
 					encontrado = true
 					arreglo.splice(i,1);
+					alert("Se ha eliminado al usuario correctamente");
 					break;
-				}else{
-					encontrado = false;
-				}
 			}
+		}
 
 			if (encontrado == false) {
 				console.log("Usuario no encontrado");
+				alert("No se ha encontrado el usuario a modificar");
 			}
 
 		}
@@ -73,24 +74,29 @@ function ejercicio12(){
 					if(modificar == 1){
 						var nuevovalor=prompt("Ingrese el nuevo nombre para el usuario");
 						i.nombre = nuevovalor;
+						alert("Valor modificado correctamente");
 					}else if(modificar ==2){
 						var nuevovalor=prompt("Ingrese el nuevo nombre para el usuario");
 						i.apellido= nuevovalor;
+						alert("Valor modificado correctamente");
 
 					}else if(modificar ==3){
 						var nuevovalor=prompt("Ingrese el nuevo nombre para el usuario");
 						i.fechanac= nuevovalor;
+						alert("Valor modificado correctamente");
 
 					}else if(modificar ==4){
 						var nuevovalor=prompt("Ingrese el nuevo nombre para el usuario");
 						i.telefono= nuevovalor;
+						alert("Valor modificado correctamente");
 
 					}else if(modificar ==5){
 						var nuevovalor=prompt("Ingrese el nuevo nombre para el usuario");
 						i.correo= nuevovalor;
+						alert("Valor modificado correctamente");
 
 					}
-						
+						break;
 					}else{
 						encontrado = false;
 					}
@@ -99,6 +105,7 @@ function ejercicio12(){
 
 				if (encontrado == false) {
 					console.log("Usuario no encontrado");
+					alert("Usuario a modificar no se ha encontrado");
 				}
 
 			
@@ -121,6 +128,7 @@ function ejercicio12(){
 				}
 				if(encontrado == false){
 					console.log("No se ha encontrado al usuario");
+					alert("No se ha encontrado al usuario");
 				}
 			}else if (numero ==5){
 
@@ -130,6 +138,7 @@ function ejercicio12(){
 
 			} else if(numero == 6){
 				console.log("Usted esta saliendo del ejercicio");
+				alert("Usted esta saliendo del ejercicio");
 
 
 			}
